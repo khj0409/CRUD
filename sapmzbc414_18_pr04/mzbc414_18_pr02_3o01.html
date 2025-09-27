@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+<title>MZBC414_18_PR02_3O01</title>
+</head>
+<body bgcolor="#FFFFE0">
+<font size="3" face = "Arial" color="#000000"> <b>Code listing for: MZBC414_18_PR02_3O01</b></font>
+<br>
+<font size="3" face = "Arial" color="#000000"> <b>Description:  Include MZBC414_18_PR02_3O01</b></font>
+<hr>
+<pre width="150">
+<font color ="#0000FF">*&---------------------------------------------------------------------*</font>
+<font color ="#0000FF">*& Include          MZBC414_18_PR02_3O01</font>
+<font color ="#0000FF">*&---------------------------------------------------------------------*</font>
+<font color ="#0000FF">*&---------------------------------------------------------------------*</font>
+<font color ="#0000FF">*& Module STATUS_0200 OUTPUT</font>
+<font color ="#0000FF">*&---------------------------------------------------------------------*</font>
+<font color ="#0000FF">*&</font>
+<font color ="#0000FF">*&---------------------------------------------------------------------*</font>
+MODULE status_0100 OUTPUT.
+  SET PF-STATUS 'STATUS_100'.
+  SET TITLEBAR 'TITLE_100'.
+  PERFORM get_initial_data.
+ENDMODULE.
+<font color ="#0000FF">*&---------------------------------------------------------------------*</font>
+<font color ="#0000FF">*& Module STATUS_0200 OUTPUT</font>
+<font color ="#0000FF">*&---------------------------------------------------------------------*</font>
+<font color ="#0000FF">*&</font>
+<font color ="#0000FF">*&---------------------------------------------------------------------*</font>
+MODULE status_0200 OUTPUT.
+ SET PF-STATUS 'S200'.
+ SET TITLEBAR 'PR02_200' WITH zsdyn_conn_18-carrid
+                              zsdyn_conn_18-connid
+                              zsdyn_conn_18-fldate.
+ENDMODULE.
+<font color ="#0000FF">*&---------------------------------------------------------------------*</font>
+<font color ="#0000FF">*& Module STATUS_0300 OUTPUT</font>
+<font color ="#0000FF">*&---------------------------------------------------------------------*</font>
+<font color ="#0000FF">*&</font>
+<font color ="#0000FF">*&---------------------------------------------------------------------*</font>
+MODULE status_0300 OUTPUT.
+ SET PF-STATUS 'S300'.
+ SET TITLEBAR 'PR04_300' WITH zsdyn_conn_18-carrid
+                              zsdyn_conn_18-connid
+                              zsdyn_conn_18-fldate.
+ENDMODULE.
+</pre>
+<hr>
+<font size="2" face = "Sans Serif">Extracted by Direct Download Enterprise version 1.3 - E.G.Mellodew. 1998-2004 UK. Sap Release 757
+</font>
+</body>
+</html>

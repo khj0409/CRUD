@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+<title>MZBC414_18_PR02_3TOP</title>
+</head>
+<body bgcolor="#FFFFE0">
+<font size="3" face = "Arial" color="#000000"> <b>Code listing for: MZBC414_18_PR02_3TOP</b></font>
+<br>
+<font size="3" face = "Arial" color="#000000"> <b>Description:  Include MZBC414_18_PR02_3TOP</b></font>
+<hr>
+<pre width="150">
+<font color ="#0000FF">*&---------------------------------------------------------------------*</font>
+<font color ="#0000FF">*& Include          MZBC414_18_PR02_3TOP</font>
+<font color ="#0000FF">*&---------------------------------------------------------------------*</font>
+PROGRAM SAPMZBC414_18_PR02_3 MESSAGE-ID zbc414_18.
+
+TABLES: zsbook_18, zsdyn_conn_18.
+
+DATA: gs_data TYPE zsdyn_conn_18,
+      gt_data TYPE zsbook_18.
+
+DATA:      ok_code TYPE sy-ucomm.
+
+TYPES: BEGIN OF ty_sbook,
+         carrid TYPE zsbook_18-carrid,
+         connid TYPE zsbook_18-connid,
+         fldate TYPE zsbook_18-fldate,
+         bookid TYPE zsbook_18-bookid,
+         status TYPE c LENGTH 1,   " 'A' ##, 'D' ##, ' ' ##
+       END OF ty_sbook.
+
+DATA: gt_sbook TYPE TABLE OF zsbook_18,
+      gs_sbook TYPE zsbook_18.
+</pre>
+<hr>
+<font size="2" face = "Sans Serif">Extracted by Direct Download Enterprise version 1.3 - E.G.Mellodew. 1998-2004 UK. Sap Release 757
+</font>
+</body>
+</html>
